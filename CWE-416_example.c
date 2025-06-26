@@ -12,7 +12,6 @@ void process_message() {
     char *m = get_message();
     printf("Message before free: %s\n", m);
     free(m);
-    // CWE-416: 釋放後仍存取
     printf("Message after free: %s\n", m);
 }
 
