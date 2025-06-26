@@ -8,7 +8,7 @@ void list_dir() {
     printf("Which dir to list? ");
     fgets(dir, sizeof(dir), stdin);
     dir[strcspn(dir, "\n")] = 0;
-    strcat(cmd, dir); // CWE‑78：未過濾 input，可能 “; rm -rf /”
+    strcat(cmd, dir); 
     system(cmd);
 }
 
