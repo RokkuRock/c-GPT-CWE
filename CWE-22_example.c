@@ -3,7 +3,7 @@
 
 void read_file(const char *filename) {
     char path[512] = "data/";
-    strcat(path, filename); // CWE‑22: 未過濾 ../
+    strcat(path, filename); 
     FILE *f = fopen(path, "r");
     if (!f) { perror("fopen"); return; }
     char buf[100];
