@@ -4,7 +4,7 @@
 void eval_expr(const char *expr) {
     char cmd[256];
     snprintf(cmd, sizeof(cmd), "echo $((%s))", expr);
-    system(cmd); // CWE‑94: 任意程式碼注入
+    system(cmd);
 }
 
 int main() {
