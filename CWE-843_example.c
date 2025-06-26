@@ -12,8 +12,8 @@ short* get_buffer() {
 void do_confusion() {
     union Data d;
     d.s = get_buffer();
-    d.i = 12345; // CWE‑843: 覆寫原本為指標的 union 欄位
-    printf("Accessing as pointer -> %d\n", d.s[0]); // 未定義行為
+    d.i = 12345; 
+    printf("Accessing as pointer -> %d\n", d.s[0]);
 }
 
 int main() {
