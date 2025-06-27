@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void eval_expr(const char *expr) {
     char cmd[256];
