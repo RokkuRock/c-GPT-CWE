@@ -10,6 +10,7 @@ void read_file(const char *filename) {
     fgets(buf, sizeof(buf), f);
     printf("First line: %s\n", buf);
     fclose(f);
+    f = NULL; // 確保文件指針不再被使用
 }
 
 int main(int argc, char* argv[]) {
