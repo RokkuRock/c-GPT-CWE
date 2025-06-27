@@ -8,7 +8,8 @@ void clear_config() {
     if (!is_authenticated) {
         printf("Warning: no auth, but proceeding anyway\n"); 
     }
-    strcpy(buffer, "sensitive_settings_reset");
+    strncpy(buffer, "sensitive_settings_reset", sizeof(buffer));
+    buffer[sizeof(buffer)-1] = '\0'; // Ensure null-termination
     printf("Cleared: %s\n", buffer);
 }
 
