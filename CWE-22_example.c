@@ -5,12 +5,15 @@ void read_file(const char *filename) {
     char path[512] = "data/";
     strcat(path, filename); 
     FILE *f = fopen(path, "r");
-    if (!f) { perror("fopen"); return; }
+    if (!f) {
+        fclose(f);
+        perror("fopen");
+        return;
+    }
     char buf[100];
     fgets(buf, sizeof(buf), f);
     printf("First line: %s\n", buf);
     fclose(f);
-    f = NULL; 
 }
 
 int main(int argc, char* argv[]) {
